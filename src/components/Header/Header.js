@@ -1,4 +1,6 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import "./Header.css";
 import { Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 
@@ -7,13 +9,21 @@ const Header = () => {
     <>
       <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
         <Container>
-          <Navbar.Brand href="/">APWT Task 6</Navbar.Brand>
+          <Link className="brand" to="/">
+            APWT Task 6
+          </Link>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="me-auto">
-              <Nav.Link href="/home">Home</Nav.Link>
-              <Nav.Link href="/contact">Contact</Nav.Link>
-              <Nav.Link href="/about">About</Nav.Link>
+              <Link className="nav_bar" to="/Home">
+                Home
+              </Link>
+              <Link className="nav_bar" to="/contact">
+                Contact
+              </Link>
+              <Link className="nav_bar" to="/about">
+                About
+              </Link>
             </Nav>
           </Navbar.Collapse>
         </Container>
